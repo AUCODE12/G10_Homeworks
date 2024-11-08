@@ -1,0 +1,161 @@
+1. 1 ta son berilgan. Berilgan sonni necha xonali
+eknaligini aniqlang.
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Son kiriting: ");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var sum = 0;
+
+            while (number != 0) 
+            {
+                sum += number % 10;
+                number /= 10;
+            }
+
+            Console.WriteLine(sum);
+        }
+    }
+}
+
+2. 1 ta son berilgan. Berilgan sonda juft raqamlar
+miqdorini aniqlang.
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Son kiriting: ");
+            var number = Convert.ToInt32(Console.ReadLine());
+            
+            var sum = 0;
+            var count = 0;
+
+            while (number != 0) 
+            {
+                sum = number % 10;
+                if (sum % 2 == 0) 
+                {   
+                    count++;
+                }
+                number /= 10;
+            }
+
+            Console.WriteLine(count);
+        }
+    }
+}
+
+3. Foydalanuvchi tomonidan sonlar kiritilaveradi. Bu jarayon 0 kiritilguncha davom etadi. Shu kiritilgan sonlarning miqdorini toping. Miqorda 0 raqami hisobga olinmasin.
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Son kiriting: ");
+            var number = Convert.ToInt32(Console.ReadLine());
+            
+            var count = 0;
+            
+            while (number != 0) 
+            {
+                count++;
+                Console.Write("Keyingi sonni kiriting: ");
+                number = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine(count);
+        }
+    }
+}
+
+4. Foydalanuvchi tomonidan sonlar kiritilaveradi. Bu jarayon 0 kiritilguncha davom etadi. Shu kiritilgan sonlarning 50 dan kattalarini yig'indisini toping. 
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Son kiriting: ");
+            var number = Convert.ToInt32(Console.ReadLine());
+            
+            var sum = 0;
+            
+            while (number != 0) 
+            {
+                if (number > 50)
+                {
+                    sum += number;
+                }
+                Console.Write("Keyingi sonni kiriting: ");
+                number = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine(sum);
+        }
+    }
+}
+
+5. 1 ta butun son berilgan. Berilgan son raqamlari orasida 5 raqami bor 
+yo’qligini aniqlovchi programma tuzilsin.
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Son kiriting: ");
+            var number = Convert.ToInt32(Console.ReadLine());
+            
+            var lastNum = 0;
+            
+            while (number != 0) 
+            {
+                lastNum = number % 10;
+                if (lastNum == 5) 
+                {
+                    Console.WriteLine("5 raqami bor");
+                    break;
+                }
+                number /= 10;
+            }
+
+            Console.WriteLine("5 raqami yo'q");
+        }
+    }
+}
+
+6.  n butun soni berilgan (n > 0). Agar n soni 3 ning darajasi bo'lsa  
+"3 ning darajasi", aks xolda “3 ning darajasi emas” degan natija 
+chiqarwchi dastur tuzing. 
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("n: ");
+            var number = Convert.ToInt32(Console.ReadLine());
+
+            var sum = 1;
+            while (number > sum) 
+            {
+                sum *= 3;               
+            }
+            if (number == sum)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+        }
+    }
+}
+
