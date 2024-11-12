@@ -1,0 +1,360 @@
+1.	helloName
+Name nomli satr berilgan, masalan “Aziz”, ushbu korinishda natijani qaytaring(return qiling): “Hello Aziz!”.
+helloName("Bob") → "Hello Bob!"
+helloName("Alice") → "Hello Alice!"
+helloName("X") → "Hello X!"
+
+using System;
+using System.Diagnostics.Metrics;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter name: ");
+            var enterName = Console.ReadLine();
+            string response;
+        
+            HelloName(enterName, out response);
+
+            Console.WriteLine(response);
+        }
+        
+        public static void HelloName(string name, out string response)
+        {
+            response = string.Format("Hello {0}", name);
+        }
+    }
+}
+
+
+
+2.	makeAbba
+Ikkita a va b satr berilgan. Natijani abba ketma-ketlikda qaytaring. Masalan, “Hi” va “Bye” satrlar bolsa, natija “HiByeByeHi” bolsin.
+makeAbba("Hi", "Bye") → "HiByeByeHi"
+makeAbba("Yo", "Alice") → "YoAliceAliceYo"
+makeAbba("What", "Up") → "WhatUpUpWhat"
+
+using System;
+using System.Diagnostics.Metrics;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter first text: ");
+            var firstText = Console.ReadLine();
+            Console.Write("Enter second text: ");
+            var secondText = Console.ReadLine();
+
+            string response;
+        
+            MakeAbba(firstText, secondText, out response);
+
+            Console.WriteLine(response);
+        }
+        
+        public static void MakeAbba(string firstText, string secondText, out string response)
+        {
+            response = string.Format("{0}{1}{1}{0}", firstText, secondText);
+        }
+    }
+}
+
+
+
+
+3.	makeOutWord
+2ta a va b satr berilgan. a satr uzunligi 4ga tengligi malum. a satrni 2 va 3-harflari o’rtasiga b satrni joylashtirib natijani qaytaring.
+makeOutWord("<<>>", "Yay") → "<<Yay>>"
+makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
+makeOutWord("[[]]", "word") → "[[word]]"
+
+using System;
+using System.Diagnostics.Metrics;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter first text: ");
+            var firstText = Console.ReadLine();
+            Console.Write("Enter second text: ");
+            var secondText = Console.ReadLine();
+
+            string response;
+
+            MakeOutWord(firstText, secondText, out response);
+
+            Console.WriteLine(response);
+        }
+        
+        public static void MakeOutWord(string firstText, string secondText, out string response)
+        {
+            response = firstText.Insert(2, secondText);
+        }
+    }
+}
+
+
+
+4.	extraEnd. 
+Uzunligi kamida 2ga teng bolgan satr berilgan. Shu satrni oxirgi 2ta harfini  3 marta yonma-yon qilib natijani qaytaring.
+extraEnd("Hello") → "lololo"
+extraEnd("ab") → "ababab"
+extraEnd("Hi") → "HiHiHi"
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter text: ");
+            var text = Console.ReadLine();
+            string response;
+
+            ExtraEnd(text, out response);
+
+            Console.WriteLine(response);
+        }
+        
+        public static void ExtraEnd(string text, out string response)
+        {
+            var lastTwoLatters = text.Substring(text.Length - 2);
+            response = string.Format("{0}{0}{0}", lastTwoLatters);
+        }
+    }
+}
+
+
+
+5.	firstTwo
+Satr berilgan. Ushbu satrni birinchi 2ta harfini returnga qaytaring. Agar satr uzunligi 2dan kichik bolsa, osha satrni ozini qaytaring.
+firstTwo("Hello") → "He"
+firstTwo("abcdefg") → "ab"
+firstTwo("ab") → "ab"
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter text: ");
+            var text = Console.ReadLine();
+            string response;
+
+            ExtraEnd(text, out response);
+
+            Console.WriteLine(response);
+        }
+        
+        public static void ExtraEnd(string text, out string response)
+        {
+            if (text.Length > 2)
+            {
+                response = text.Substring(0, 2);
+            }
+            else
+            {
+                response = text;
+            }
+        }
+    }
+}
+
+
+
+6.	firstHalf
+Juft uzunlikdagi satr berilgan. Shu satrni birinchi yarmini qaytaring.
+firstHalf("WooHoo") → "Woo"
+firstHalf("HelloThere") → "Hello"
+firstHalf("abcdef") → "abc"
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter text: ");
+            var text = Console.ReadLine();
+            string response;
+
+            FirstHalf(text, out response);
+
+            Console.WriteLine(response);
+        }
+        
+        public static void FirstHalf(string text, out string response)
+        {
+            if (text.Length % 2 == 0)
+            {
+                response = text.Substring(0, text.Length / 2);
+            }
+            else
+            {
+                response = string.Empty;
+            }
+        }
+    }
+}
+
+
+
+7.	withoutEnd
+Kamida 2ta harfdan iborat satr berilgan. Shu satrni boshidagi va oxiridagi harflarisiz natijani qaytaring.
+withoutEnd("Hello") → "ell"
+withoutEnd("java") → "av"
+withoutEnd("coding") → "odin"
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter text: ");
+            var text = Console.ReadLine();
+            string response;
+
+            WithoutEnd(text, out response);
+
+            Console.WriteLine(response);
+        }
+        
+        public static void WithoutEnd(string text, out string response)
+        {
+            if (text.Length > 2)
+            {
+                response = text.Substring(1, text.Length - 2);
+            }
+            else
+            {
+                response = text;
+            }
+        }
+    }
+}
+
+
+
+8.	comboString
+2ta a va b satrlar berilgan. Shu satrlarni eng kichik uzunlikdagisi short, eng uzuni long bo’lsin. short+long+short korinishda natijani qaytaring.
+comboString("Hello", "hi") → "hiHellohi"
+comboString("hi", "Hello") → "hiHellohi"
+comboString("aaa", "b") → "baaab"
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter first text: ");
+            var firstText = Console.ReadLine();
+            Console.Write("Enter second text: ");
+            var secondText = Console.ReadLine();
+            string response;
+
+            ComboString(firstText, secondText, out response);
+
+            Console.WriteLine(response);
+        }
+        
+        public static void ComboString(string firstText, string secondText, out string response)
+        {
+            if (firstText.Length > secondText.Length)
+            {
+                response = string.Format("{0}{1}{0}", secondText, firstText);
+            }
+            else
+            {
+                response = string.Format("{1}{0}{1}", secondText, firstText);
+            }
+
+        }
+    }
+}
+
+
+
+9.	nonStart
+Uzunligi kamida 1ga teng bo’lgan 2ta satr berilgan. Ushbu satrlarni 1-harflarini hisobga olmasdan, satrlarni qo’shib natijani qaytaring.
+nonStart("Hello", "There") → "ellohere"
+nonStart("java", "code") → "avaode"
+nonStart("shotl", "java") → "hotlava"
+
+10.	left2
+Satr berilgan. Satrni birinchi 2ta harfini olib, davomiga qo’yib, natijani qaytaring.
+left2("Hello") → "lloHe"
+left2("java") → "vaja"
+left2("Hi") → "Hi"
+
+11.	theEnd
+Satr va Boolean tipidagi front nomli o’zgaruvchi berilgan. Agar front – true bo’lsa, satrni birinchi harfini, front – false bo’lsa, satrni oxirgi harfini qaytaring.
+theEnd("Hello", true) → "H"
+theEnd("Hello", false) → "o"
+theEnd("oh", true) → "o"
+
+12.	nTwice
+Satr va n soni berilgan. Satrni birinchi n ta harfi va oxirgi n ta harfidan iborat yangi satrni qaytaring.
+nTwice("Hello", 2) → "Helo"
+nTwice("Chocolate", 3) → "Choate"
+nTwice("Chocolate", 1) → "Ce"
+
+13.	middleThree
+Toq uzunlikdagi satr berilgan. Satrni o’rtasidagi 3ta harfdan iborat yangi satrni qaytaring. 
+middleThree("Candy") → "and"
+middleThree("and") → "and"
+middleThree("solving") → "lvi"
+
+14.	conCat
+2ta a va b satrlar berilgan. a satr davomidan b satrni qoyib natijani qaytaring. Agar a satrni oxirgi belgisi b satrni 1-belgisi bilan bir xil bolsa, bu belgilarni 1tasini hisobga oling.
+conCat("abc", "cat") → "abcat"
+conCat("dog", "cat") → "dogcat"
+conCat("abc", "") → "abc"
+
+15.	lastTwo
+Satr berilgan. Satrni oxirgi 2ta harfini almashtirgan holda natijani qaytaring.
+lastTwo("coding") → "codign"
+lastTwo("cat") → "cta"
+lastTwo("ab") → "ba"
+
+16.	seeColor
+Satr berilgan. Agar satr “red” yoki “blue” bilan boshlansa, shu rangni qaytaring. aks holda bosh stringni qaytaring.
+seeColor("redxx") → "red"
+seeColor("xxred") → ""
+seeColor("blueTimes") → "blue"
+
+17.	frontAgain
+Satr berilgan. Agar satrni oxiri satrni birinchi 2ta belgisi bilan tugasa, true qaytaring.
+frontAgain("edited") → true
+frontAgain("edit") → false
+frontAgain("ed") → true
+
+18.	minCat
+2ta a va b satr berilgan. Katta satrni oxirini kichik satr uzunligicha qoldiring va yakunda ikkita bir xil uzunlikdagi satrlarni qoshib qaytaring. Agar satrlar uzunligi teng bolsa, oddiygina shularni qoshib qaytaring.
+minCat("Hello", "Hi") → "loHi"
+minCat("Hello", "java") → "ellojava"
+minCat("java", "Hello") → "javaello"
+
+19.	deFront
+Satr berilgan. Satrni boshidagi 2ta belgisini olib tashlang, lekin birinchi belgi ‘a’ bolsa, qoldiring, ikkinchi belgi ‘b’ bolsa, buni ham qoldiring. Natijani qaytaring.
+deFront("Hello") → "llo"
+deFront("java") → "va"
+deFront("away") → "aay"
+
+20.	withoutX
+Satr berilgan. Agar satrni birinchi yoki oxirgi belgisi ‘x’ bolsa, shu ‘x’larni olib tashlab, satrni qaytaring, aks holda satrni o’zini qaytaring.
+withoutX("xHix") → "Hi"
+withoutX("xHi") → "Hi"
+withoutX("Hxix") → "Hxi"
+
