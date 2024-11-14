@@ -1060,13 +1060,123 @@ namespace ConsoleApp5
     }
 }
 
-qiyin
+//qiyin
 
 21. 
 N ta elementdan iborat 1 o‘lchamli list berilgan. Agar elementlari o‘suvchi bo‘lsa true aks holda false chiqaring.
 
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            CheckIfSorted(numbersList);
+            DisplayList(numbersList);
+        }
+
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+
+        public static void CheckIfSorted(List<int> numbers)
+        {
+            bool isSorted = true;
+
+            for (int i = 0; i < numbers.Count - 1; i++)
+            {
+                if (numbers[i] > numbers[i + 1])
+                {
+                    isSorted = false;
+                    break; 
+                }
+            }
+
+            Console.WriteLine(isSorted ? "True" : "False"); 
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
 22. 
 N ta elementdan iborat 1 o‘lchamli list berilgan. Agar elementlari kamayuvchi bo‘lsa true aks holda false chiqaring.
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            CheckIfSorted(numbersList);
+            DisplayList(numbersList);
+        }
+
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+
+        public static void CheckIfSorted(List<int> numbers)
+        {
+            bool isSorted = true;
+
+            for (int i = 0; i < numbers.Count - 1; i++)
+            {
+                if (numbers[i] < numbers[i + 1])
+                {
+                    isSorted = false;
+                    break; 
+                }
+            }
+
+            Console.WriteLine(isSorted ? "True" : "False"); 
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
 
 23. 
 N ta elementdan iborat 1 o‘lchamli list berilgan. Eng katta elementi bilan eng kichik elementini joyini almashtiring. Va listni chiqaring.
