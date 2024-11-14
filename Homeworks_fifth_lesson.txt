@@ -8,49 +8,49 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             Console.Write("Enter length: ");
-            var length = int.Parse(Console.ReadLine());
-            var numbersList = FillList(length);
-            TwiceNumberCount(numbersList);
-            DisplayList(numbersList);
-
-
+            var listLength = int.Parse(Console.ReadLine());
+            var numberList = GenerateNumberList(listLength);
+            CountThreeDigitNumbers(numberList);
+            DisplayNumberList(numberList);
         }
-        public static List<int> FillList(int length)
+
+        public static List<int> GenerateNumberList(int length)
         {
-            var digits  = new List<int>();
+            var numberList = new List<int>();
             for (int i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var number = int.Parse(Console.ReadLine());
+                numberList.Add(number);
             }
-            return digits;
+            return numberList;
         }
-        public static void TwiceNumberCount(List<int> numbers)
+
+        public static void CountThreeDigitNumbers(List<int> numbers)
         {
-            var count = 0;
+            var threeDigitCount = 0;
             foreach (var number in numbers)
             {
                 if (number >= 100 && number <= 999)
                 {
-                    count++;
+                    threeDigitCount++;
                 }
             }
             
-            Console.WriteLine(count);
+            Console.WriteLine(threeDigitCount);
         }
-        
 
-        public static void DisplayList(List<int> digits)
+        public static void DisplayNumberList(List<int> numbers)
         {
-            foreach (var digit in digits)
+            foreach (var number in numbers)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{number} ");
             }
             Console.WriteLine();
         }
     }
 }
+
 
 
 2. 
@@ -63,44 +63,43 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             Console.Write("Enter length: ");
-            var length = int.Parse(Console.ReadLine());
-            var numbersList = FillList(length);
-            TwiceNumberCount(numbersList);
-            DisplayList(numbersList);
-
-
+            var listLength = int.Parse(Console.ReadLine());
+            var numberList = GenerateNumberList(listLength);
+            CountEvenNumbers(numberList);
+            DisplayNumberList(numberList);
         }
-        public static List<int> FillList(int length)
+
+        public static List<int> GenerateNumberList(int length)
         {
-            var digits  = new List<int>();
+            var numberList = new List<int>();
             for (int i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var number = int.Parse(Console.ReadLine());
+                numberList.Add(number);
             }
-            return digits;
+            return numberList;
         }
-        public static void TwiceNumberCount(List<int> numbers)
+
+        public static void CountEvenNumbers(List<int> numbers)
         {
-            var count = 0;
+            var evenCount = 0;
             foreach (var number in numbers)
             {
                 if (number % 2 == 0)
                 {
-                    count++;
+                    evenCount++;
                 }
             }
-            
-            Console.WriteLine($"Juft elementlar {count} ta");
-        }
-        
 
-        public static void DisplayList(List<int> digits)
+            Console.WriteLine($"Juft elementlar {evenCount} ta");
+        }
+
+        public static void DisplayNumberList(List<int> numbers)
         {
-            foreach (var digit in digits)
+            foreach (var number in numbers)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{number} ");
             }
             Console.WriteLine();
         }
@@ -117,44 +116,43 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             Console.Write("Enter length: ");
-            var length = int.Parse(Console.ReadLine());
-            var numbersList = FillList(length);
-            TwiceNumberCount(numbersList);
-            DisplayList(numbersList);
-
-
+            var listLength = int.Parse(Console.ReadLine());
+            var numberList = GenerateNumberList(listLength);
+            SumOddNumbers(numberList);
+            DisplayNumberList(numberList);
         }
-        public static List<int> FillList(int length)
+
+        public static List<int> GenerateNumberList(int length)
         {
-            var digits  = new List<int>();
+            var numberList = new List<int>();
             for (int i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var number = int.Parse(Console.ReadLine());
+                numberList.Add(number);
             }
-            return digits;
+            return numberList;
         }
-        public static void TwiceNumberCount(List<int> numbers)
+
+        public static void SumOddNumbers(List<int> numbers)
         {
-            var sumOdd = 0;
+            var oddSum = 0;
             foreach (var number in numbers)
             {
                 if (number % 2 != 0)
                 {
-                    sumOdd += number;
+                    oddSum += number;
                 }
             }
-            
-            Console.WriteLine($"Toq elementlar yig'indisi {sumOdd}");
-        }
-        
 
-        public static void DisplayList(List<int> digits)
+            Console.WriteLine($"Toq elementlar yig'indisi {oddSum}");
+        }
+
+        public static void DisplayNumberList(List<int> numbers)
         {
-            foreach (var digit in digits)
+            foreach (var number in numbers)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{number} ");
             }
             Console.WriteLine();
         }
@@ -171,50 +169,49 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             Console.Write("Enter length: ");
-            var length = int.Parse(Console.ReadLine());
-            var numbersList = FillList(length);
-            TwiceNumberCount(numbersList);
-            DisplayList(numbersList);
-
-
+            var listLength = int.Parse(Console.ReadLine());
+            var numberList = GenerateNumberList(listLength);
+            CountDivisibleBy3And7(numberList);
+            DisplayNumberList(numberList);
         }
-        public static List<int> FillList(int length)
+
+        public static List<int> GenerateNumberList(int length)
         {
-            var digits  = new List<int>();
+            var numberList = new List<int>();
             for (int i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var number = int.Parse(Console.ReadLine());
+                numberList.Add(number);
             }
-            return digits;
+            return numberList;
         }
-        public static void TwiceNumberCount(List<int> numbers)
+
+        public static void CountDivisibleBy3And7(List<int> numbers)
         {
-            var triple = 0;
-            var timesSeven = 0;
+            var divisibleBy3Count = 0;
+            var divisibleBy7Count = 0;
             foreach (var number in numbers)
             {
                 if (number % 3 == 0)
                 {
-                    triple++;
+                    divisibleBy3Count++;
                 }
                 if (number % 7 == 0)
                 {
-                    timesSeven++;
+                    divisibleBy7Count++;
                 }
             }
-            
-            Console.WriteLine($"3ga karrali elementlar miqdori {triple}");
-            Console.WriteLine($"7ga karrali elementlar miqdori {timesSeven}");
-        }
-        
 
-        public static void DisplayList(List<int> digits)
+            Console.WriteLine($"3ga karrali elementlar miqdori {divisibleBy3Count}");
+            Console.WriteLine($"7ga karrali elementlar miqdori {divisibleBy7Count}");
+        }
+
+        public static void DisplayNumberList(List<int> numbers)
         {
-            foreach (var digit in digits)
+            foreach (var number in numbers)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{number} ");
             }
             Console.WriteLine();
         }
@@ -232,47 +229,46 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             Console.Write("Enter length: ");
-            var length = int.Parse(Console.ReadLine());
-            var numbersList = FillList(length);
-            TwiceNumberCount(numbersList);
-            DisplayList(numbersList);
-
-
+            var listLength = int.Parse(Console.ReadLine());
+            var numberList = GenerateNumberList(listLength);
+            CountTwoDigitOddNumbers(numberList);
+            DisplayNumberList(numberList);
         }
-        public static List<int> FillList(int length)
+
+        public static List<int> GenerateNumberList(int length)
         {
-            var digits  = new List<int>();
+            var numberList = new List<int>();
             for (int i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var number = int.Parse(Console.ReadLine());
+                numberList.Add(number);
             }
-            return digits;
+            return numberList;
         }
-        public static void TwiceNumberCount(List<int> numbers)
+
+        public static void CountTwoDigitOddNumbers(List<int> numbers)
         {
-            var twoDigitSum = 0;
-            var towDigitCount = 0;
+            var twoDigitOddSum = 0;
+            var twoDigitOddCount = 0;
             foreach (var number in numbers)
             {
                 if (number % 2 != 0 && number >= 10 && number <= 99)
                 {
-                    twoDigitSum += number;
-                    towDigitCount++;
+                    twoDigitOddSum += number;
+                    twoDigitOddCount++;
                 }
             }
-            
-            Console.WriteLine($"2 xonali toq elementlarini miqdorini {towDigitCount}");
-            Console.WriteLine($"2 xonali toq elementlar yig'indisi {twoDigitSum}");
-        }
-        
 
-        public static void DisplayList(List<int> digits)
+            Console.WriteLine($"2 xonali toq elementlar miqdori {twoDigitOddCount}");
+            Console.WriteLine($"2 xonali toq elementlar yig'indisi {twoDigitOddSum}");
+        }
+
+        public static void DisplayNumberList(List<int> numbers)
         {
-            foreach (var digit in digits)
+            foreach (var number in numbers)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{number} ");
             }
             Console.WriteLine();
         }
@@ -289,25 +285,25 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             Console.Write("Enter length: ");
-            var length = int.Parse(Console.ReadLine());
-            var numbersList = FillList(length);
-            SwapFirstAndLast(numbersList);
-            DisplayList(numbersList);
-
-
+            var listLength = int.Parse(Console.ReadLine());
+            var numberList = GenerateNumberList(listLength);
+            SwapFirstAndLastElements(numberList);
+            DisplayNumberList(numberList);
         }
-        public static List<int> FillList(int length)
+
+        public static List<int> GenerateNumberList(int length)
         {
-            var digits  = new List<int>();
+            var numberList = new List<int>();
             for (var i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var number = int.Parse(Console.ReadLine());
+                numberList.Add(number);
             }
-            return digits;
+            return numberList;
         }
-        public static void SwapFirstAndLast(List<int> numbers)
+
+        public static void SwapFirstAndLastElements(List<int> numbers)
         {
             if (numbers.Count > 1)
             {
@@ -316,13 +312,12 @@ namespace ConsoleApp5
                 numbers[numbers.Count - 1] = temp;
             }
         }
-        
 
-        public static void DisplayList(List<int> digits)
+        public static void DisplayNumberList(List<int> numbers)
         {
-            foreach (var digit in digits)
+            foreach (var number in numbers)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{number} ");
             }
             Console.WriteLine();
         }
@@ -339,40 +334,39 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             Console.Write("Enter length: ");
-            var length = int.Parse(Console.ReadLine());
-            var numbersList = FillList(length);
-            SumThree(numbersList);
-            DisplayList(numbersList);
-
-
+            var listLength = int.Parse(Console.ReadLine());
+            var numberList = GenerateNumberList(listLength);
+            SumFirstThreeNumbers(numberList);
+            DisplayNumberList(numberList);
         }
-        public static List<int> FillList(int length)
+
+        public static List<int> GenerateNumberList(int length)
         {
-            var digits = new List<int>();
+            var numberList = new List<int>();
             for (int i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var number = int.Parse(Console.ReadLine());
+                numberList.Add(number);
             }
-            return digits;
+            return numberList;
         }
-        public static void SumThree(List<int> numbers)
+
+        public static void SumFirstThreeNumbers(List<int> numbers)
         {
-            var sumThree = 0;
+            var sumFirstThree = 0;
             for (var i = 0; i < 3; i++)
             {
-                sumThree += numbers[i];
+                sumFirstThree += numbers[i];
             }
-            Console.WriteLine(sumThree);
+            Console.WriteLine(sumFirstThree);
         }
 
-
-        public static void DisplayList(List<int> digits)
+        public static void DisplayNumberList(List<int> numbers)
         {
-            foreach (var digit in digits)
+            foreach (var number in numbers)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{number} ");
             }
             Console.WriteLine();
         }
@@ -389,40 +383,39 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             Console.Write("Enter length: ");
-            var length = int.Parse(Console.ReadLine());
-            var numbersList = FillList(length);
-            SumLastThree(numbersList);
-            DisplayList(numbersList);
-
-
+            var listLength = int.Parse(Console.ReadLine());
+            var numberList = GenerateNumberList(listLength);
+            SumLastThreeNumbers(numberList);
+            DisplayNumberList(numberList);
         }
-        public static List<int> FillList(int length)
+
+        public static List<int> GenerateNumberList(int length)
         {
-            var digits = new List<int>();
+            var numberList = new List<int>();
             for (int i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var number = int.Parse(Console.ReadLine());
+                numberList.Add(number);
             }
-            return digits;
+            return numberList;
         }
-        public static void SumLastThree(List<int> numbers)
+
+        public static void SumLastThreeNumbers(List<int> numbers)
         {
-            var sumThree = 0;
+            var sumLastThree = 0;
             for (var i = numbers.Count - 1; i > numbers.Count - 4; i--)
             {
-                sumThree += numbers[i];
+                sumLastThree += numbers[i];
             }
-            Console.WriteLine(sumThree);
+            Console.WriteLine(sumLastThree);
         }
 
-
-        public static void DisplayList(List<int> digits)
+        public static void DisplayNumberList(List<int> numbers)
         {
-            foreach (var digit in digits)
+            foreach (var number in numbers)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{number} ");
             }
             Console.WriteLine();
         }
@@ -440,41 +433,42 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             Console.Write("Enter length: ");
-            var length = int.Parse(Console.ReadLine());
-            var numbersList = FillList(length);
-            OddPairComparison(numbersList);
-            DisplayList(numbersList);
-
-
+            var listLength = int.Parse(Console.ReadLine());
+            var numberList = GenerateNumberList(listLength);
+            CompareOddAndEvenCounts(numberList);
+            DisplayNumberList(numberList);
         }
-        public static List<int> FillList(int length)
+
+        public static List<int> GenerateNumberList(int length)
         {
-            var digits = new List<int>();
+            var numberList = new List<int>();
             for (int i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var number = int.Parse(Console.ReadLine());
+                numberList.Add(number);
             }
-            return digits;
+            return numberList;
         }
-        public static void OddPairComparison(List<int> numbers)
+
+        public static void CompareOddAndEvenCounts(List<int> numbers)
         {
-            var countPair = 0;
-            var countOdd = 0;
+            var evenCount = 0;
+            var oddCount = 0;
 
             for (var i = 0; i < numbers.Count; i++)
             {
                 if (numbers[i] % 2 == 0)
                 {
-                    countPair++;
+                    evenCount++;
                 }
                 if (numbers[i] % 2 != 0)
                 {
-                    countOdd++;
+                    oddCount++;
                 }
             }
-            if (countOdd > countPair)
+
+            if (oddCount > evenCount)
             {
                 Console.WriteLine("True");
             }
@@ -484,12 +478,11 @@ namespace ConsoleApp5
             }
         }
 
-
-        public static void DisplayList(List<int> digits)
+        public static void DisplayNumberList(List<int> numbers)
         {
-            foreach (var digit in digits)
+            foreach (var number in numbers)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{number} ");
             }
             Console.WriteLine();
         }
@@ -509,8 +502,9 @@ namespace ConsoleApp5
             var length = int.Parse(Console.ReadLine());
             var numbersList = FillList(length);
             OddPairComparison(numbersList);
-            DisplayList(numbersList);s
+            DisplayList(numbersList);  
         }
+
         public static List<int> FillList(int length)
         {
             var digits = new List<int>();
@@ -522,6 +516,7 @@ namespace ConsoleApp5
             }
             return digits;
         }
+
         public static void OddPairComparison(List<int> numbers)
         {
             for (var i = 0; i < numbers.Count; i++)
@@ -559,6 +554,7 @@ namespace ConsoleApp5
             OddPairComparison(numbersList);
             DisplayList(numbersList);
         }
+
         public static List<int> FillList(int length)
         {
             var digits = new List<int>();
@@ -570,20 +566,20 @@ namespace ConsoleApp5
             }
             return digits;
         }
+
         public static void OddPairComparison(List<int> numbers)
         {
-            var timesFive = true;
+            var allMultipleOfFive = true; 
             foreach (var number in numbers)
             {
                 if (number % 5 != 0)
                 {
-                    timesFive = false;	
+                    allMultipleOfFive = false;	
                     break;
                 }
             }
-            Console.WriteLine(timesFive);
+            Console.WriteLine(allMultipleOfFive); 
         }
-
 
         public static void DisplayList(List<int> digits)
         {
@@ -666,6 +662,7 @@ namespace ConsoleApp5
             FirstTwoEvenLastTwoOddCheck(numbersList);
             DisplayList(numbersList);
         }
+        
         public static List<int> FillList(int length)
         {
             var digits = new List<int>();
@@ -677,15 +674,18 @@ namespace ConsoleApp5
             }
             return digits;
         }
+
         public static void FirstTwoEvenLastTwoOddCheck(List<int> numbers)
         {
-            if (numbers.Count < 2)
+            if (numbers.Count < 4)
             {
                 Console.WriteLine(false);
+                return; 
             }
 
             var startEven = numbers[0] % 2 == 0 && numbers[1] % 2 == 0;
-            var endOdd = numbers[^1] % 2 != 0 && numbers[^2] % 2 != 0;
+            var endOdd = numbers[numbers.Count - 1] % 2 != 0 && numbers[numbers.Count - 2] % 2 != 0;
+
             Console.WriteLine(startEven && endOdd);
         }
 
@@ -715,6 +715,7 @@ namespace ConsoleApp5
             FindSmallestNumber(numbersList);
             DisplayList(numbersList);
         }
+
         public static List<int> FillList(int length)
         {
             var digits = new List<int>();
@@ -726,12 +727,19 @@ namespace ConsoleApp5
             }
             return digits;
         }
+
         public static void FindSmallestNumber(List<int> numbers)
         {
-            var minimalNum = numbers.Min();
-            Console.WriteLine(minimalNum);
-        }
+            // Ro'yxat bo'sh bo'lsa xato chiqarish
+            if (numbers.Count == 0)
+            {
+                Console.WriteLine("The list is empty. Cannot find the smallest number.");
+                return;
+            }
 
+            var minimalNum = numbers.Min();
+            Console.WriteLine($"The smallest number is: {minimalNum}");
+        }
 
         public static void DisplayList(List<int> digits)
         {
