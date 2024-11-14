@@ -732,7 +732,6 @@ namespace ConsoleApp5
             Console.WriteLine(minimalNum);
         }
 
-
         public static void DisplayList(List<int> digits)
         {
             foreach (var digit in digits)
@@ -756,7 +755,7 @@ namespace ConsoleApp5
             Console.Write("Enter length: ");
             var length = int.Parse(Console.ReadLine());
             var numbersList = FillList(length);
-            FindSmallestNumber(numbersList);
+            FindSmallestAndLargest(numbersList);
             DisplayList(numbersList);
         }
         public static List<int> FillList(int length)
@@ -770,13 +769,12 @@ namespace ConsoleApp5
             }
             return digits;
         }
-        public static void FindSmallestNumber(List<int> numbers)
+        public static void FindSmallestAndLargest(List<int> numbers)
         {
-            var minimalNum = numbers.Min();
-            var maximalNum = numbers.Max();
-            Console.WriteLine(minimalNum + maximalNum);
+            var smallestNumber = numbers.Min();
+            var largestNumber = numbers.Max();
+            Console.WriteLine(smallestNumber + largestNumber);
         }
-
 
         public static void DisplayList(List<int> digits)
         {
@@ -804,33 +802,35 @@ namespace ConsoleApp5
             IncreaseTwoDigitNumbers(numbersList);
             DisplayList(numbersList);
         }
+
         public static List<int> FillList(int length)
         {
-            var digits = new List<int>();
+            var raqamlar = new List<int>();
             for (int i = 0; i < length; i++)
             {
                 Console.Write($"{i}: ");
-                var addNumber = int.Parse(Console.ReadLine());
-                digits.Add(addNumber);
+                var yangiRaqam = int.Parse(Console.ReadLine());
+                raqamlar.Add(yangiRaqam);
             }
-            return digits;
+            return raqamlar;
         }
-        public static void IncreaseTwoDigitNumbers(List<int> numbers)
+
+        public static void IncreaseTwoDigitNumbers(List<int> raqamlar)
         {
-            for (var i = 0; i < numbers.Count; i++)
+            for (var i = 0; i < raqamlar.Count; i++)
             {
-                if (numbers[i] >= 10 && numbers[i] <= 99)
+                if (raqamlar[i] >= 10 && raqamlar[i] <= 99)
                 {
-                    numbers[i] += 100;
+                    raqamlar[i] += 100;
                 }
             }
         }
 
-        public static void DisplayList(List<int> digits)
+        public static void DisplayList(List<int> raqamlar)
         {
-            foreach (var digit in digits)
+            foreach (var raqam in raqamlar)
             {
-                Console.Write($"{digit} ");
+                Console.Write($"{raqam} ");
             }
             Console.WriteLine();
         }
@@ -852,6 +852,7 @@ namespace ConsoleApp5
             IncreaseTwoDigitNumbers(numbersList);
             DisplayList(numbersList);
         }
+
         public static List<int> FillList(int length)
         {
             var digits = new List<int>();
@@ -863,6 +864,7 @@ namespace ConsoleApp5
             }
             return digits;
         }
+
         public static void IncreaseTwoDigitNumbers(List<int> numbers)
         {
             var positiveCount = 0;
@@ -914,6 +916,7 @@ namespace ConsoleApp5
             IncreaseTwoDigitNumbers(numbersList);
             DisplayList(numbersList);
         }
+        
         public static List<int> FillList(int length)
         {
             var digits = new List<int>();
@@ -925,6 +928,7 @@ namespace ConsoleApp5
             }
             return digits;
         }
+
         public static void IncreaseTwoDigitNumbers(List<int> numbers)
         {
             var firstElement = numbers[0];
@@ -965,6 +969,7 @@ namespace ConsoleApp5
             IncreaseTwoDigitNumbers(numbersList);
             DisplayList(numbersList);
         }
+
         public static List<int> FillList(int length)
         {
             var digits = new List<int>();
@@ -976,11 +981,12 @@ namespace ConsoleApp5
             }
             return digits;
         }
+
         public static void IncreaseTwoDigitNumbers(List<int> numbers)
         {
             var firstElement = numbers[numbers.Count - 1];
             var sumBigInLastNum = 0;
-            for (var i = 1; i < numbers.Count; i++)
+            for (var i = 0; i < numbers.Count - 1; i++)
             {
                 if (numbers[i] > firstElement)
                 {
@@ -1016,6 +1022,7 @@ namespace ConsoleApp5
             CheckDivisibility(numbersList);
             DisplayList(numbersList);
         }
+
         public static List<int> FillList(int length)
         {
             var digits = new List<int>();
@@ -1027,10 +1034,11 @@ namespace ConsoleApp5
             }
             return digits;
         }
+
         public static void CheckDivisibility(List<int> numbers)
         {
             var allDivisible = true;
-            for (var i = 1; i < numbers.Count; i++)
+            for (var i = 0; i < numbers.Count; i++) 
             {
                 if (!(numbers[i] % 3 == 0 || numbers[i] % 5 == 0))
                 {
