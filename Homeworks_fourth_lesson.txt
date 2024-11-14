@@ -286,3 +286,190 @@ namespace ConsoleApp3
 
 
 
+1.Stringni Teskariga O'girish
+Tavsif: Berilgan stringni teskariga o'girish kerak. Masalan, "salom" stringini o'ngdan chapga o'qiganda "molas" natijani qaytarishi kerak.
+Misol: Kiritish: "salom", Natija: "molas"
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter text: ");
+            var text = Console.ReadLine();
+
+            string result;
+
+            ReverseText(text, out result);
+
+            Console.WriteLine(result);
+        }
+
+        public static void ReverseText(string publicText, out string response)
+        {
+            response = string.Empty;
+            for (int i = publicText.Length - 1; i >= 0; i--)
+            {
+                response += publicText[i];
+            }
+        }
+    }
+}
+
+2.Unli va Undosh Harflarni Sanash
+Tavsif: Berilgan stringda qancha unli va undosh harflar borligini aniqlang. Unli harflar: a, e, i, o, u, boshqa harflar esa undosh hisoblanadi.
+Misol: Kiritish: "salom", Natija: Unlilar: 2, Undoshlar: 3
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter text: ");
+            var text = Console.ReadLine();
+
+            int resultVowel;
+            int resultConsonant;
+
+            CountVowelAndConsonant(text, out resultVowel, out resultConsonant);
+
+            Console.WriteLine($"Undoshlar: {resultConsonant} ta");
+            Console.WriteLine($"Unlilar: {resultVowel} ta");
+        }
+
+        public static void CountVowelAndConsonant(string publicText, out int responseCountVowel, out int responseCountConsonant)
+        {
+            responseCountVowel = 0;
+            responseCountConsonant = 0;
+            publicText = publicText.ToLower();
+            for (int i = 0; i < publicText.Length; i++)
+            {
+                if (publicText[i] == 'a' || publicText[i] == 'e' || publicText[i] == 'i' || publicText[i] == 'o' || publicText[i] == 'u')
+                {
+                    responseCountVowel++;
+                }
+                else if (char.IsLetter(publicText[i]) && !(publicText[i] == 'a' || publicText[i] == 'e' || publicText[i] == 'i' || publicText[i] == 'o' || publicText[i] == 'u'))
+                {
+                    responseCountConsonant++;
+                }
+            }
+        }
+    }
+}
+
+3.Palindromligini Tekshirish
+Tavsif: Berilgan string palindrom ekanligini tekshirish kerak. Agar stringni o'ngdan chapga o'qiganda ham, chapdan o'ngga o'qiganda ham bir xil bo'lsa, u palindrom hisoblanadi.
+Misol: Kiritish: "bob", Natija: true
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter text: ");
+            var text = Console.ReadLine();
+
+            bool result;
+
+            CheckPalindrome(text, out result);
+        
+            Console.WriteLine(result);
+        }
+
+        public static void CheckPalindrome(string publicText, out bool response)
+        {
+            response = false;
+            var reversePublicText = string.Empty;
+
+            for (int i = publicText.Length - 1; i >= 0; i--)
+            {
+                reversePublicText += publicText[i];
+            }
+            if (reversePublicText == publicText)
+            {
+                response = true;
+            }
+        }
+    }
+}
+
+
+1.Anagramligini Tekshirish
+Tavsif: Ikkita string berilgan. Ular anagram bo'lsa, bir-biriga mos harflar va bir xil son bilan tashkil topadi. Masalan, "salom" va "lasom" bir xil harflarga ega, lekin tartibi boshqacha.
+Misol: Kiritish: "salom", "lasom", Natija: true
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter first text: ");
+            var firstText = Console.ReadLine();
+            Console.Write("Enter second text: ");
+            var secondText = Console.ReadLine();
+
+            bool result;
+
+            CheckAnagram(firstText, secondText, out result);
+        
+            Console.WriteLine(result);
+        }
+
+        public static void CheckAnagram(string publicFirstText, string publicSecondText, out bool response)
+        {
+            publicFirstText = publicFirstText.Replace(" ", "").ToLower();
+            publicSecondText = publicSecondText.Replace(" ", "").ToLower();
+            if (publicFirstText.Length != publicSecondText.Length)
+            {
+                response = false;
+                return;
+            }
+            char[] firstArray = publicFirstText.ToCharArray();
+            char[] secondArray = publicSecondText.ToCharArray();
+
+            Array.Sort(firstArray);
+            Array.Sort(secondArray);
+
+            response = new string(firstArray) == new string(secondArray);
+        }
+    }
+}
+
+2.Eng Uzun So'zni Topish
+Tavsif: Berilgan gapdagi eng uzun so'zni topish kerak. So'zlar orasidagi bo'sh joylarga qarab ajratiladi.
+Misol: Kiritish: "Juda tez tulki o'rmondan yugurib o'tdi", Natija: "yugurib"
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter text: ");
+            var text = Console.ReadLine();
+            string result;
+
+            FindLongestWord(text, out result);
+            Console.WriteLine(result);
+        }
+
+        public static void FindLongestWord(string publicText, out string response)
+        {
+            string[] words = publicText.Split(' ');
+            response = words[0];
+            for (int i = 1; i < words.Length; i++)
+            { 
+                 if (response.Length < words[i].Length)
+                {
+                    response = words[i];
+                }
+            }
+        }
+    }
+}
+
+3.	
