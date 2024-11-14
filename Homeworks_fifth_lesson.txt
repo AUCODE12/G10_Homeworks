@@ -730,7 +730,6 @@ namespace ConsoleApp5
 
         public static void FindSmallestNumber(List<int> numbers)
         {
-            // Ro'yxat bo'sh bo'lsa xato chiqarish
             if (numbers.Count == 0)
             {
                 Console.WriteLine("The list is empty. Cannot find the smallest number.");
