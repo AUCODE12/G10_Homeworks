@@ -715,7 +715,6 @@ namespace ConsoleApp5
             FindSmallestNumber(numbersList);
             DisplayList(numbersList);
         }
-
         public static List<int> FillList(int length)
         {
             var digits = new List<int>();
@@ -727,18 +726,12 @@ namespace ConsoleApp5
             }
             return digits;
         }
-
         public static void FindSmallestNumber(List<int> numbers)
         {
-            if (numbers.Count == 0)
-            {
-                Console.WriteLine("The list is empty. Cannot find the smallest number.");
-                return;
-            }
-
             var minimalNum = numbers.Min();
-            Console.WriteLine($"The smallest number is: {minimalNum}");
+            Console.WriteLine(minimalNum);
         }
+
 
         public static void DisplayList(List<int> digits)
         {
