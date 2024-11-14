@@ -1,0 +1,1099 @@
+1. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. 3 xonali elementlarini miqdorini toping.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            TwiceNumberCount(numbersList);
+            DisplayList(numbersList);
+
+
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits  = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void TwiceNumberCount(List<int> numbers)
+        {
+            var count = 0;
+            foreach (var number in numbers)
+            {
+                if (number >= 100 && number <= 999)
+                {
+                    count++;
+                }
+            }
+            
+            Console.WriteLine(count);
+        }
+        
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+
+2. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Juft elementlarini miqdorini toping.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            TwiceNumberCount(numbersList);
+            DisplayList(numbersList);
+
+
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits  = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void TwiceNumberCount(List<int> numbers)
+        {
+            var count = 0;
+            foreach (var number in numbers)
+            {
+                if (number % 2 == 0)
+                {
+                    count++;
+                }
+            }
+            
+            Console.WriteLine($"Juft elementlar {count} ta");
+        }
+        
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+3. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Toq elementlarini yig‘indisini toping.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            TwiceNumberCount(numbersList);
+            DisplayList(numbersList);
+
+
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits  = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void TwiceNumberCount(List<int> numbers)
+        {
+            var sumOdd = 0;
+            foreach (var number in numbers)
+            {
+                if (number % 2 != 0)
+                {
+                    sumOdd += number;
+                }
+            }
+            
+            Console.WriteLine($"Toq elementlar yig'indisi {sumOdd}");
+        }
+        
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+4. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. 3 ga va 7 ga karrali elementlarini miqdorini toping.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            TwiceNumberCount(numbersList);
+            DisplayList(numbersList);
+
+
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits  = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void TwiceNumberCount(List<int> numbers)
+        {
+            var triple = 0;
+            var timesSeven = 0;
+            foreach (var number in numbers)
+            {
+                if (number % 3 == 0)
+                {
+                    triple++;
+                }
+                if (number % 7 == 0)
+                {
+                    timesSeven++;
+                }
+            }
+            
+            Console.WriteLine($"3ga karrali elementlar miqdori {triple}");
+            Console.WriteLine($"7ga karrali elementlar miqdori {timesSeven}");
+        }
+        
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+
+5. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. 2 xonali toq elementlarini miqdorini va yig‘indisini toping.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            TwiceNumberCount(numbersList);
+            DisplayList(numbersList);
+
+
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits  = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void TwiceNumberCount(List<int> numbers)
+        {
+            var twoDigitSum = 0;
+            var towDigitCount = 0;
+            foreach (var number in numbers)
+            {
+                if (number % 2 != 0 && number >= 10 && number <= 99)
+                {
+                    twoDigitSum += number;
+                    towDigitCount++;
+                }
+            }
+            
+            Console.WriteLine($"2 xonali toq elementlarini miqdorini {towDigitCount}");
+            Console.WriteLine($"2 xonali toq elementlar yig'indisi {twoDigitSum}");
+        }
+        
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+6. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. 1 chi va oxirgi elementlarini almashtiring va ekranga listni chiqaring.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            SwapFirstAndLast(numbersList);
+            DisplayList(numbersList);
+
+
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits  = new List<int>();
+            for (var i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void SwapFirstAndLast(List<int> numbers)
+        {
+            if (numbers.Count > 1)
+            {
+                var temp = numbers[0];
+                numbers[0] = numbers[numbers.Count - 1];
+                numbers[numbers.Count - 1] = temp;
+            }
+        }
+        
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+7. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Dastlabki 3 ta elementini yig‘indisini toping.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            SumThree(numbersList);
+            DisplayList(numbersList);
+
+
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void SumThree(List<int> numbers)
+        {
+            var sumThree = 0;
+            for (var i = 0; i < 3; i++)
+            {
+                sumThree += numbers[i];
+            }
+            Console.WriteLine(sumThree);
+        }
+
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+8. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Oxirgi 3 ta elementini yig‘indisi toping.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            SumLastThree(numbersList);
+            DisplayList(numbersList);
+
+
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void SumLastThree(List<int> numbers)
+        {
+            var sumThree = 0;
+            for (var i = numbers.Count - 1; i > numbers.Count - 4; i--)
+            {
+                sumThree += numbers[i];
+            }
+            Console.WriteLine(sumThree);
+        }
+
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+9. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Toq elementlar bn Juft elementlarini taqqoslang.
+Agar toqlari ko‘p bo‘lsa true aks holda false chiqaring.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            OddPairComparison(numbersList);
+            DisplayList(numbersList);
+
+
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void OddPairComparison(List<int> numbers)
+        {
+            var countPair = 0;
+            var countOdd = 0;
+
+            for (var i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    countPair++;
+                }
+                if (numbers[i] % 2 != 0)
+                {
+                    countOdd++;
+                }
+            }
+            if (countOdd > countPair)
+            {
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
+        }
+
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+10. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Juft elementlarini 3 barobarga oshiring.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            OddPairComparison(numbersList);
+            DisplayList(numbersList);s
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void OddPairComparison(List<int> numbers)
+        {
+            for (var i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    numbers[i] = numbers[i] * 3;
+                }
+            }
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+11. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Agar hamma elementi 5 ga karrali bo‘lsa true aks holda false chiqaring.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            OddPairComparison(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void OddPairComparison(List<int> numbers)
+        {
+            var timesFive = true;
+            foreach (var number in numbers)
+            {
+                if (number % 5 != 0)
+                {
+                    timesFive = false;	
+                    break;
+                }
+            }
+            Console.WriteLine(timesFive);
+        }
+
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+12. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Agar dastlabki 3 ta elementi 2 xonali bo‘lsa true aks holda false chiqaring.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            FirstThreeTwoDigitCheck(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void FirstThreeTwoDigitCheck(List<int> numbers)
+        {
+            var timesFive = true;
+            if (numbers.Count < 3)
+            {
+                timesFive = false;
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                if (!(numbers[i] >= 10 && numbers[i] <= 99))
+                {
+                    timesFive = false;
+                    break;
+                }
+            }
+            Console.WriteLine(timesFive);
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+13. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Agar dastlabki 2 ta elementni juft va oxirgi 2 ta elementi toq bo‘lsa true aks holda false chiqaring
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            FirstTwoEvenLastTwoOddCheck(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void FirstTwoEvenLastTwoOddCheck(List<int> numbers)
+        {
+            if (numbers.Count < 2)
+            {
+                Console.WriteLine(false);
+            }
+
+            var startEven = numbers[0] % 2 == 0 && numbers[1] % 2 == 0;
+            var endOdd = numbers[^1] % 2 != 0 && numbers[^2] % 2 != 0;
+            Console.WriteLine(startEven && endOdd);
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+14. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Eng kichik elementini aniqlang.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            FindSmallestNumber(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void FindSmallestNumber(List<int> numbers)
+        {
+            var minimalNum = numbers.Min();
+            Console.WriteLine(minimalNum);
+        }
+
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+15. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Eng katta va eng kichik elementini yig‘indisini aniqlang.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            FindSmallestNumber(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void FindSmallestNumber(List<int> numbers)
+        {
+            var minimalNum = numbers.Min();
+            var maximalNum = numbers.Max();
+            Console.WriteLine(minimalNum + maximalNum);
+        }
+
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+16. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Barcha 2 xonali elementlarni qiymatini 100 ga oshiring.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            IncreaseTwoDigitNumbers(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void IncreaseTwoDigitNumbers(List<int> numbers)
+        {
+            for (var i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] >= 10 && numbers[i] <= 99)
+                {
+                    numbers[i] += 100;
+                }
+            }
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+17. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Musbat va Manfiy elementlarini miqdorini aniqlang.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            IncreaseTwoDigitNumbers(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void IncreaseTwoDigitNumbers(List<int> numbers)
+        {
+            var positiveCount = 0;
+            var negativeCount = 0;
+            var zeroCount = 0;
+            for (var i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] > 0)
+                {
+                    positiveCount++;
+                }
+                else if (numbers[i] < 0)
+                {
+                    negativeCount++;
+                }
+                else
+                {
+                    zeroCount++;
+                }
+            }
+            Console.WriteLine($"Musbat {positiveCount} ta");
+            Console.WriteLine($"Manfiy {negativeCount} ta");
+            Console.WriteLine($"0 {zeroCount} ta");
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+18. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. 1 chi elementidan kichik bo‘lgan elementlarni miqdorini aniqlang.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            IncreaseTwoDigitNumbers(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void IncreaseTwoDigitNumbers(List<int> numbers)
+        {
+            var firstElement = numbers[0];
+            var smallNum = 0;
+            for (var i = 1; i < numbers.Count; i++)
+            {
+                if (numbers[i] < firstElement)
+                {
+                    smallNum++;
+                }
+            }
+            Console.WriteLine($"Birinchi elementdan kichik elementlar miqdori: {smallNum}");
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+19. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Oxirgi elementida katta bo‘lgan elementlarni yig‘indisini aniqlang.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            IncreaseTwoDigitNumbers(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void IncreaseTwoDigitNumbers(List<int> numbers)
+        {
+            var firstElement = numbers[numbers.Count - 1];
+            var sumBigInLastNum = 0;
+            for (var i = 1; i < numbers.Count; i++)
+            {
+                if (numbers[i] > firstElement)
+                {
+                    sumBigInLastNum += numbers[i];
+                }
+            }
+            Console.WriteLine($"Oxirgi elementdan katta elementlar yig'indisi: {sumBigInLastNum}");
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+20. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Agar barcha elementni 4 ga yoki 3 ga karrali bo‘lsa "hello" aks holda "salom" ni chiqaring.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter length: ");
+            var length = int.Parse(Console.ReadLine());
+            var numbersList = FillList(length);
+            CheckDivisibility(numbersList);
+            DisplayList(numbersList);
+        }
+        public static List<int> FillList(int length)
+        {
+            var digits = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write($"{i}: ");
+                var addNumber = int.Parse(Console.ReadLine());
+                digits.Add(addNumber);
+            }
+            return digits;
+        }
+        public static void CheckDivisibility(List<int> numbers)
+        {
+            var allDivisible = true;
+            for (var i = 1; i < numbers.Count; i++)
+            {
+                if (!(numbers[i] % 3 == 0 || numbers[i] % 5 == 0))
+                {
+                    allDivisible = false;
+                    break;
+                }
+            }
+            Console.WriteLine(allDivisible ? "hello" : "salom");
+        }
+
+        public static void DisplayList(List<int> digits)
+        {
+            foreach (var digit in digits)
+            {
+                Console.Write($"{digit} ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+qiyin
+
+21. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Agar elementlari o‘suvchi bo‘lsa true aks holda false chiqaring.
+
+22. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Agar elementlari kamayuvchi bo‘lsa true aks holda false chiqaring.
+
+23. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Eng katta elementi bilan eng kichik elementini joyini almashtiring. Va listni chiqaring.
+
+24. 
+N ta elementdan iborat 1 o‘lchamli list berilgan. Elementlar yig‘indisini aniqlang
+
+
+25. n ta elementdan tashkil topgan massiv berilgan. 
+Massiv elementlari orasidan yig'indisi eng katta bo'ladigan 2 ta qo'shni 
+elementni chiqaruvchi  programma tuzilsin.
+
+26. n ta elementdan tashkil topgan massiv berilgan. 
+Massiv elementlari orasidan chap qo'shnisidan katta bo'lganlar sonini chiqaruvchi programma tuzilsin.
+
+27. n ta elementdan tashkil topgan 2 ta massiv berilgan. listni mos elementlar ko'paytmasidan tashkil topgan yangi list hosil qiling va ekranga chiqaring.
+
+28. n ta elementdan tashkil topgan string massiv berilgan.'$' bilan boshlanadigan elementlar miqdorini aniqlang.
+
+juda qiyin
+
+29. n ta elementdan tashkil topgan string massiv berilgan. Hamma belgisi katta harf bo'lgan elementlarini ekranga chiqaruvchi dastur tuzing. 
+
+30.n ta butun sonlardan iborat massiv berilgan. 
+Massivdagi har bir juft sonni birinchi uchragan juft songa orttiruvchi programma tuzilsin.
+
+31.n ta butun sonlardan iborat massiv berilgan. 
+Massivdagi har bir toq sonni oxirgi toq songa orttiruvchi programma tuzilsin.
+
+32.n ta elementdan tashkil topgan massiv berilgan. 
+Massivning juft indeksli elementlari orasidan kichigini aniqlovchi programma tuzilsin. min(a0, a2, a4, ...)
+
+33.n ta elementdan tashkil topgan a va b massiv berilgan. c massivni hosil qiling. c[i] = max(a[i], b[i]),
+ ya'ni c massivning i-elementi a va b massivlarning i-elementlaridan kattasini qabul qilsin.
+
+34.n ta elementdan iborat butun sonlardan tashkil topgan a massiv berilgan.
+ a massivning juft elementlaridan tashkil topgan b massivini hosil qiling. 
+b massiv elementlari soni va elementlari chiqarilsin.
