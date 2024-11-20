@@ -1,0 +1,15 @@
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\bin\Debug\net8.0\MainApp.exe
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\bin\Debug\net8.0\MainApp.deps.json
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\bin\Debug\net8.0\MainApp.runtimeconfig.json
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\bin\Debug\net8.0\MainApp.dll
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\bin\Debug\net8.0\MainApp.pdb
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\MainApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\MainApp.AssemblyInfoInputs.cache
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\MainApp.AssemblyInfo.cs
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\MainApp.csproj.CoreCompileInputs.cache
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\MainApp.sourcelink.json
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\MainApp.dll
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\refint\MainApp.dll
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\MainApp.pdb
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\MainApp.genruntimeconfig.cache
+D:\Projects\G10_Homeworks\Homework_Class\src\MainApp\obj\Debug\net8.0\ref\MainApp.dll
