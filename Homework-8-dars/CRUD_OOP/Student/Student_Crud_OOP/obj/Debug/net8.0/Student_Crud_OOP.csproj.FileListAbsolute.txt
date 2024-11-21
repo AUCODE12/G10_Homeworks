@@ -1,0 +1,15 @@
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\bin\Debug\net8.0\Student_Crud_OOP.exe
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\bin\Debug\net8.0\Student_Crud_OOP.deps.json
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\bin\Debug\net8.0\Student_Crud_OOP.runtimeconfig.json
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\bin\Debug\net8.0\Student_Crud_OOP.dll
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\bin\Debug\net8.0\Student_Crud_OOP.pdb
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\Student_Crud_OOP.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\Student_Crud_OOP.AssemblyInfoInputs.cache
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\Student_Crud_OOP.AssemblyInfo.cs
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\Student_Crud_OOP.csproj.CoreCompileInputs.cache
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\Student_Crud_OOP.sourcelink.json
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\Student_Crud_OOP.dll
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\refint\Student_Crud_OOP.dll
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\Student_Crud_OOP.pdb
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\Student_Crud_OOP.genruntimeconfig.cache
+D:\Projects\G10_Homeworks\Homework-8-dars\CRUD_OOP\Student\Student_Crud_OOP\obj\Debug\net8.0\ref\Student_Crud_OOP.dll
