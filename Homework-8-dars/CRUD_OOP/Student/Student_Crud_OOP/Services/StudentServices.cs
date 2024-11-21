@@ -27,6 +27,7 @@ internal class StudentServices
         {
             if (student.Id == studentId)
             {
+                students.Remove(student);
                 exists = true;
                 break;
             }
