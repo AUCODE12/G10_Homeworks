@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Car_Crud_OOP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57accf6d7ac4e3a8ea4504f17a2469906d810daf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4618ffac448d9a60cfaeccbd0f8e00b3df2505a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Car_Crud_OOP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Car_Crud_OOP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

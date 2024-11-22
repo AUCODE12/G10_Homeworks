@@ -6,7 +6,7 @@ internal class Car
 
     public string Name { get; set; } // Avtomobil nomi
 
-    public int Year { get; set; } // Model yili
+    public DateTime Year { get; set; } // Model yili
 
     public string Color { get; set; } // Rang
 

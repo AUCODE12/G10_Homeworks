@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Car_Crud_OOP/1.0.0": {
+        "runtime": {
+          "Car_Crud_OOP.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Car_Crud_OOP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

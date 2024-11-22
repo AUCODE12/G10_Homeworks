@@ -9,6 +9,7 @@ internal class CarServices
     public CarServices()
     {
         cars = new List<Car>();
+        DataSeed();
     }
 
     public Car AddCar(Car car)
@@ -17,7 +18,7 @@ internal class CarServices
         cars.Add(car);
         return car;
     }
-    public List<Car> GetCars()
+    public List<Car> GetAllCars()
     {
         return cars;
     }
@@ -42,5 +43,49 @@ internal class CarServices
         }
         return false;
     }
-    public
+    public bool DeleteCar(Guid carId)
+    {
+        for (var i = 0; i < cars.Count; i++)
+        {
+            if (cars[i].Id == carId)
+            {
+                cars.Remove(cars[i]);
+                return true;
+            }
+        }
+        return false;
+    }
+    private void DataSeed()
+    {
+        var firstCar = new Car()
+        {
+            Id = Guid.NewGuid(),
+            Name = "Bugatti1",
+            Year = new DateTime(2014, 7, 24),
+            Color = "Black",
+            EngineCapacity = 4.5,
+            Price = 000000,
+        };
+        var secondCar = new Car()
+        {
+            Id = Guid.NewGuid(),
+            Name = "Bugatti2",
+            Year = new DateTime(2017, 3, 16),
+            Color = "White",
+            EngineCapacity = 5.5,
+            Price = 000000,
+        };
+        var thirdCar = new Car()
+        {
+            Id = Guid.NewGuid(),
+            Name = "Bugatti3",
+            Year = new DateTime(2009, 12, 9),
+            Color = "Gold",
+            EngineCapacity = 3.5,
+            Price = 000000,
+        };
+        cars.Add(firstCar);
+        cars.Add(secondCar);
+        cars.Add(thirdCar);
+    }
 }
