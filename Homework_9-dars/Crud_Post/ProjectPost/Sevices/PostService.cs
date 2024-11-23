@@ -122,7 +122,7 @@ public class PostService
         return ComnetdetPosts;
     }
 
-    public bool LikeAdding(Guid id)
+    public bool AddLike(Guid id)
     {
         var postFromDb = GetPostById(id);
         if (postFromDb is null)
@@ -134,7 +134,7 @@ public class PostService
         return true;
     }
 
-    public bool CommentAdding(Guid id, string newComment)
+    public bool AddCommnetToPost(Guid id, string newComment)
     {
         var postFromDb = GetPostById(id);
         if (postFromDb is null)
@@ -146,7 +146,7 @@ public class PostService
         return true;
     }
 
-    public bool ViewNameAdding(Guid id, string newUser)
+    public bool AddViewerToPost(Guid id, string newUser)
     {
         var postFromDb = GetPostById(id);
         if (postFromDb is null)
