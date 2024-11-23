@@ -121,4 +121,40 @@ public class PostService
         }
         return ComnetdetPosts;
     }
+
+    public bool LikeAdding(Guid id)
+    {
+        var postFromDb = GetPostById(id);
+        if (postFromDb is null)
+        {
+            return false;
+        }
+        postFromDb.QuantityLikes++;
+        
+        return true;
+    }
+
+    public bool CommentAdding(Guid id, string newComment)
+    {
+        var postFromDb = GetPostById(id);
+        if (postFromDb is null)
+        {
+            return false;
+        }
+        postFromDb.Comments.Add(newComment);
+
+        return true;
+    }
+
+    public bool ViewNameAdding(Guid id, string newUser)
+    {
+        var postFromDb = GetPostById(id);
+        if (postFromDb is null)
+        {
+            return false;
+        }
+        postFromDb.ViewerNames.Add(newUser);
+
+        return true;
+    }
 }
