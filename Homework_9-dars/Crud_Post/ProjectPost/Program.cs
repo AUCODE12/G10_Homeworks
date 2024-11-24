@@ -27,8 +27,8 @@ namespace ProjectPost
                 Console.WriteLine("8. Add Viewer post");
                 Console.WriteLine("9. Get post by comment: ");
                 Console.WriteLine("10. Most like to post: ");
-                Console.WriteLine("10. Most comment to post: ");
-                Console.WriteLine("10. Most viewer to post: ");
+                Console.WriteLine("11. Most comment to post: ");
+                Console.WriteLine("12. Most viewer to post: ");
                 Console.WriteLine();
                 Console.Write("Enter Choose: ");
                 var option = int.Parse(Console.ReadLine());
@@ -176,6 +176,27 @@ namespace ProjectPost
                         var info = $"Id: {post.Id} \nOwner Name: {post.OwnerName} \nDescription: {post.Description} \nType: {post.Type} \nPosted Time: {post.PostedTime} \nQuantity Likes: {post.QuantityLikes} \nComments: {post.Comments} \nViewer Names: {post.ViewerNames}";
                         Console.WriteLine(info);
                     }
+                }
+                else if (option == 10)
+                {
+                    //like
+                    var post = postService.GetMostLikedPost();
+                    var info = $"Id: {post.Id} \nOwner Name: {post.OwnerName} \nDescription: {post.Description} \nType: {post.Type} \nPosted Time: {post.PostedTime} \nQuantity Likes: {post.QuantityLikes} \nComments: {post.Comments} \nViewer Names: {post.ViewerNames}";
+                    Console.WriteLine(info);
+                }
+                else if (option == 11)
+                {
+                    //comment
+                    var post = postService.GetMostCommentedPost();
+                    var info = $"Id: {post.Id} \nOwner Name: {post.OwnerName} \nDescription: {post.Description} \nType: {post.Type} \nPosted Time: {post.PostedTime} \nQuantity Likes: {post.QuantityLikes} \nComments: {post.Comments} \nViewer Names: {post.ViewerNames}";
+                    Console.WriteLine(info);
+                }
+                else if (option == 12)
+                {
+                    //viewer
+                    var post = postService.GetMostViewedPost();
+                    var info = $"Id: {post.Id} \nOwner Name: {post.OwnerName} \nDescription: {post.Description} \nType: {post.Type} \nPosted Time: {post.PostedTime} \nQuantity Likes: {post.QuantityLikes} \nComments: {post.Comments} \nViewer Names: {post.ViewerNames}";
+                    Console.WriteLine(info);
                 }
                 Console.ReadKey();
                 Console.Clear();

@@ -65,47 +65,44 @@ public class PostService
 
     public Post GetMostViewedPost()
     {
-        Post mostViewedPost = null;
-        var mostView = 0;
+        var responsePost = new Post();
         foreach (var post in posts)
         {
-            if (post.ViewerNames.Count > mostView)
+            if (responsePost.ViewerNames.Count < post.ViewerNames.Count)
             {
-                mostView = post.ViewerNames.Count;
-                mostViewedPost = post;
+                responsePost = post;
             }
         }
-        return mostViewedPost;
+
+        return responsePost;
     }
 
     public Post GetMostLikedPost()
     {
-        Post mostLikedPost = null;
-        var mostLike = 0;
+        var responsePost = new Post();
         foreach (var post in posts)
         {
-            if (post.QuantityLikes > mostLike)
+            if (responsePost.QuantityLikes <  post.QuantityLikes)
             {
-                mostLike = post.QuantityLikes;
-                mostLikedPost = post;
+                responsePost = post;
             }
         }
-        return mostLikedPost;
+
+        return responsePost;
     }
 
     public Post GetMostCommentedPost()
     {
-        Post mostCommentedPost = null;
-        var mostComment = 0;
+        var responsePost = new Post();
         foreach (var post in posts)
         {
-            if (post.Comments.Count > mostComment)
+            if (responsePost.Comments.Count < post.Comments.Count)
             {
-                mostComment = post.Comments.Count;
-                mostCommentedPost = post;
+                responsePost = post;
             }
         }
-        return mostCommentedPost;
+
+        return responsePost;
     }
 
     public List<Post> GetPostsByComment(string comment)
@@ -119,6 +116,7 @@ public class PostService
                 ComnetdetPosts.Add(post);
             }
         }
+
         return ComnetdetPosts;
     }
 
