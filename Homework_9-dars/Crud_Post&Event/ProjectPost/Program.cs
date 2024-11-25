@@ -9,7 +9,7 @@ namespace ProjectPost
         static void Main(string[] args)
         {
             //RunPostApp();
-            RunEventApp();
+            //RunEventApp();
         }
 
         public static void RunPostApp()

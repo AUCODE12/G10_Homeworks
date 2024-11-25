@@ -1,4 +1,5 @@
 ﻿using ProjectPost.Models;
+using System.ComponentModel;
 
 namespace ProjectPost.Sevices;
 
@@ -106,6 +107,30 @@ public class EventService
         }
         events.Remove(eventFromD);
 
+        return true;
+    }
+
+    // Add Person
+    public bool AddPersonToEvent(Guid id, string newPerson)
+    {
+        var requestFromDb = GetEventById(id);
+        if (requestFromDb == null)
+        {
+            return false;
+        }
+        requestFromDb.Attendees.Add(newPerson);
+        return true;
+    }
+
+    // Add Tag
+    public bool AddTagToEvent(Guid id, string newTag)
+    {
+        var requestFromDb = GetEventById(id);
+        if (requestFromDb == null)
+        {
+            return false;
+        }
+        requestFromDb.Tags.Add(newTag);
         return true;
     }
 }
