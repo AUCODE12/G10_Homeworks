@@ -8,7 +8,8 @@ namespace ProjectPost
     {
         static void Main(string[] args)
         {
-            RunPostApp();
+            //RunPostApp();
+            //RunEventApp();
         }
 
         public static void RunPostApp()
@@ -201,6 +202,10 @@ namespace ProjectPost
                 Console.ReadKey();
                 Console.Clear();
             }
+        }
+        
+        public static void RunEventApp()
+        {
         }
     }
 }
