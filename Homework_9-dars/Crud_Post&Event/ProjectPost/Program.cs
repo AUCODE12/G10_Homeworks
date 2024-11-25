@@ -9,7 +9,7 @@ namespace ProjectPost
         static void Main(string[] args)
         {
             //RunPostApp();
-            //RunEventApp();
+            RunEventApp();
         }
 
         public static void RunPostApp()
@@ -206,6 +206,116 @@ namespace ProjectPost
         
         public static void RunEventApp()
         {
+            var eventService = new EventService();
+
+            while (true)
+            {
+                Console.WriteLine("1. Add Event");
+                Console.WriteLine("2. Get All Events");
+                Console.WriteLine("3. Get Event By Id");
+                Console.WriteLine("4. Get By Location");
+                Console.WriteLine("5. Get Popular Event");
+                Console.WriteLine("6. Get Max Targetted Event");
+                Console.WriteLine("7. Updated Event");
+                Console.WriteLine("8. Deleted Event");
+                Console.WriteLine("9. Add Person To Event");
+                Console.WriteLine("10. Add Tag to Event");
+                Console.WriteLine();
+                Console.Write("Enter Choose: ");
+                var option = int.Parse(Console.ReadLine());
+                Console.WriteLine();
+
+                if (option == 1)
+                {
+                    var eventAdd = new Event();
+                    Console.Write("Title: ");
+                    eventAdd.Title = Console.ReadLine();
+                    Console.Write("Location: ");
+                    eventAdd.Location = Console.ReadLine();
+                    Console.Write("Date: ");
+                    eventAdd.Date = DateTime.Now;
+                    Console.Write("Description: ");
+                    eventAdd.Description = Console.ReadLine();
+                    //Console.Write("Attendees: ");
+                    //Console.Write("Tags: ");
+
+                    eventService.AddEvent(eventAdd);
+                }
+                else if (option == 2)
+                {
+                    var allEvents = eventService.GetAllEvent();
+                    foreach (var eventItem in allEvents)
+                    {
+                        var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
+                        Console.WriteLine(info);
+                    }
+                }
+                else if (option == 3)
+                {
+                    var id = Guid.NewGuid();
+                    var eventItem = eventService.GetEventById(id);
+                    var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
+                    Console.WriteLine(info);
+                }
+                else if (option == 4)
+                {
+                    Console.Write("Location: ");
+                    var location = Console.ReadLine();
+                    var eventItems = eventService.GetEventsByLocation(location);
+                    foreach (var eventItem in eventItems)
+                    {
+                        var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
+                        Console.WriteLine(info);
+                    }
+                }
+                else if (option == 5)
+                {   
+                    var eventItem = eventService.GetPopularEvent();
+                    var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
+                    Console.WriteLine(info);
+                }
+                else if (option == 6)
+                {
+                    var eventItem = eventService.GetMaxTaggedEvent();
+                    var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
+                    Console.WriteLine(info);
+                }
+                else if (option == 7)
+                {
+                    var eventUpdate = new Event();
+                    Console.Write("Enter Update In Id: ");
+                    eventUpdate.Id = Guid.Parse(Console.ReadLine());
+                    Console.Write("Title: ");
+                    eventUpdate.Title = Console.ReadLine();
+                    Console.Write("Location: ");
+                    eventUpdate.Location = Console.ReadLine();
+                    Console.Write("Date: ");
+                    eventUpdate.Date = DateTime.Now;
+                    Console.Write("Description: ");
+                    eventUpdate.Description = Console.ReadLine();
+                    //Console.Write("Attendees: ");
+                    //Console.Write("Tags: ");
+
+                    eventService.UpdateEvent(eventUpdate);
+                }
+                else if (option == 8)
+                {
+                    Console.Write("Enter Delete In Id: ");
+                    var id = Guid.Parse(Console.ReadLine());
+                    var requestDelete = eventService.DeleteEvent(id);
+                    if (requestDelete is true)
+                    {
+                        Console.WriteLine("Deleted");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not deleted");
+                    }
+                }
+
+                Console.ReadKey();
+                Console.Clear();
+            }
         }
     }
 }
