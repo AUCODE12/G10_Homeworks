@@ -236,8 +236,12 @@ namespace ProjectPost
                     eventAdd.Date = DateTime.Now;
                     Console.Write("Description: ");
                     eventAdd.Description = Console.ReadLine();
-                    //Console.Write("Attendees: ");
-                    //Console.Write("Tags: ");
+                    Console.Write("Attendees: ");
+                    var person = Console.ReadLine();
+                    eventService.AddPersonToEvent(eventAdd.Id, person);
+                    Console.Write("Tags: ");
+                    var tag = Console.ReadLine();
+                    eventService.AddTagToEvent(eventAdd.Id, tag);
 
                     eventService.AddEvent(eventAdd);
                 }
@@ -269,7 +273,7 @@ namespace ProjectPost
                     }
                 }
                 else if (option == 5)
-                {   
+                {
                     var eventItem = eventService.GetPopularEvent();
                     var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
                     Console.WriteLine(info);
@@ -293,8 +297,12 @@ namespace ProjectPost
                     eventUpdate.Date = DateTime.Now;
                     Console.Write("Description: ");
                     eventUpdate.Description = Console.ReadLine();
-                    //Console.Write("Attendees: ");
-                    //Console.Write("Tags: ");
+                    Console.Write("Attendees: ");
+                    var person = Console.ReadLine();
+                    eventService.AddPersonToEvent(eventUpdate.Id, person);
+                    Console.Write("Tags: ");
+                    var tag = Console.ReadLine();
+                    eventService.AddTagToEvent(eventUpdate.Id, tag);
 
                     eventService.UpdateEvent(eventUpdate);
                 }
@@ -312,7 +320,38 @@ namespace ProjectPost
                         Console.WriteLine("Not deleted");
                     }
                 }
-
+                else if (option == 9)
+                {
+                    Console.Write("Enter Id: ");
+                    var id = Guid.Parse(Console.ReadLine());
+                    Console.Write("Enter Person:");
+                    var person = Console.ReadLine();
+                    var requestAddPerson = eventService.AddPersonToEvent(id, person);
+                    if (requestAddPerson is true)
+                    {
+                        Console.WriteLine("Added Person!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not added person");
+                    }
+                }
+                else if (option == 10)
+                {
+                    Console.Write("Enter Id: ");
+                    var id = Guid.Parse(Console.ReadLine());
+                    Console.Write("Enter Tag:");
+                    var tag = Console.ReadLine();
+                    var requestAddTag = eventService.AddTagToEvent(id, tag);
+                    if (requestAddTag is true)
+                    {
+                        Console.WriteLine("Added Tag!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not added tag");
+                    }
+                }
                 Console.ReadKey();
                 Console.Clear();
             }
