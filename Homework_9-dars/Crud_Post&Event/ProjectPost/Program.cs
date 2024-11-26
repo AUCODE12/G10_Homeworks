@@ -203,7 +203,7 @@ namespace ProjectPost
                 Console.Clear();
             }
         }
-        
+
         public static void RunEventApp()
         {
             var eventService = new EventService();
@@ -252,14 +252,34 @@ namespace ProjectPost
                     {
                         var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
                         Console.WriteLine(info);
+                        foreach (var person in eventItem.Attendees)
+                        {
+                            var infoPerson = $"{person}, ";
+                            Console.Write(infoPerson);
+                        }
+                        foreach (var tag in eventItem.Tags)
+                        {
+                            var infoTag = $"{tag}, ";
+                            Console.Write(infoTag);
+                        }
                     }
                 }
                 else if (option == 3)
                 {
                     var id = Guid.NewGuid();
                     var eventItem = eventService.GetEventById(id);
-                    var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
+                    var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description} \n";
                     Console.WriteLine(info);
+                    foreach (var person in eventItem.Attendees)
+                    {
+                        var infoPerson = $"{person}, ";
+                        Console.Write(infoPerson);
+                    }
+                    foreach (var tag in eventItem.Tags)
+                    {
+                        var infoTag = $"{tag}, ";
+                        Console.Write(infoTag);
+                    }
                 }
                 else if (option == 4)
                 {
@@ -270,6 +290,16 @@ namespace ProjectPost
                     {
                         var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
                         Console.WriteLine(info);
+                        foreach (var person in eventItem.Attendees)
+                        {
+                            var infoPerson = $"{person}, ";
+                            Console.Write(infoPerson);
+                        }
+                        foreach (var tag in eventItem.Tags)
+                        {
+                            var infoTag = $"{tag}, ";
+                            Console.Write(infoTag);
+                        }
                     }
                 }
                 else if (option == 5)
@@ -277,12 +307,32 @@ namespace ProjectPost
                     var eventItem = eventService.GetPopularEvent();
                     var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
                     Console.WriteLine(info);
+                    foreach (var person in eventItem.Attendees)
+                    {
+                        var infoPerson = $"{person}, ";
+                        Console.Write(infoPerson);
+                    }
+                    foreach (var tag in eventItem.Tags)
+                    {
+                        var infoTag = $"{tag}, ";
+                        Console.Write(infoTag);
+                    }
                 }
                 else if (option == 6)
                 {
                     var eventItem = eventService.GetMaxTaggedEvent();
                     var info = $"Id: {eventItem.Id} \nTitle: {eventItem.Title} \nLocation: {eventItem.Location} \nDate: {eventItem.Date} \nDescription: {eventItem.Description}";
                     Console.WriteLine(info);
+                    foreach (var person in eventItem.Attendees)
+                    {
+                        var infoPerson = $"{person}, ";
+                        Console.Write(infoPerson);
+                    }
+                    foreach (var tag in eventItem.Tags)
+                    {
+                        var infoTag = $"{tag}, ";
+                        Console.Write(infoTag);
+                    }
                 }
                 else if (option == 7)
                 {
