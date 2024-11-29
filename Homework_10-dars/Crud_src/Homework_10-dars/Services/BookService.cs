@@ -16,6 +16,7 @@ public class BookService
     {
         book.Id = Guid.NewGuid();
         books.Add(book);
+
         return book;
     }
     public Book AddReaderToBook(Guid bookId, string readerName)
